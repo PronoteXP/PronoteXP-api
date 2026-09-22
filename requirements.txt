@@ -1,0 +1,5 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+pronotepy==2.15.7
+pycryptodome==3.23.0
+pydantic==2.11.7

@@ -1,6 +1,8 @@
 import os
+from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.routers import auth, data, export, compat
 
@@ -27,3 +29,8 @@ app.include_router(compat.router)
 @app.get("/")
 def root():
     return {"service": "PronoteXP-api", "version": "1.0.0", "docs": "/docs"}
+
+
+frontend_dir = Path(__file__).resolve().parent.parent / "frontend" / "Exporter"
+if frontend_dir.is_dir():
+    app.mount("/", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")

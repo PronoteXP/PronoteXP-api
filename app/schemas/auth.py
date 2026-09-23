@@ -1,5 +1,5 @@
 from typing import Any, Dict, Optional, Union
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class CredentialsPayload(BaseModel):
@@ -11,7 +11,7 @@ class CredentialsPayload(BaseModel):
 
 class QRCodePayload(BaseModel):
     qr_data: Union[Dict[str, Any], str]
-    pin: str = Field(min_length=4, max_length=4)
+    pin: str
     uuid: Optional[str] = None
 
 

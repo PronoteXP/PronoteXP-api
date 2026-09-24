@@ -1,5 +1,15 @@
 # PronoteXP-api
 
+## Disclaimer
+
+> <span style="color:red; font-weight:bold;">⚠️ DISCLAIMER / WARNING</span>  
+> **This project is an unofficial, third-party client developed strictly for educational purposes and personal interoperability.**
+> 
+> - It is in no way affiliated with, maintained, sponsored, or endorsed by **INDEX ÉDUCATION** or **DOCAPOSTE Group**.
+> - **PRONOTE** is a registered trademark of INDEX ÉDUCATION.
+> - Usage of this tool is entirely at your own risk. You are responsible for complying with all applicable regulations and the Terms of Service of the services you access.
+> - This API operates statelessly: no personal data, credentials, tokens, or passwords are ever stored or retained.
+
 Stateless FastAPI backend shared by **PronoteXPr** and **ProXP**. It is the only project component that communicates with `pronotepy`, PRONOTE, and ENT providers.
 
 ```text
